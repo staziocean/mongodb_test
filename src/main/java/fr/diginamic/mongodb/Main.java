@@ -56,11 +56,13 @@ public class Main {
             System.out.println(b);
         }
 
+        // Find book with id "603e586bc9e60b3f3a1479c5"
         System.out.println();
         System.out.println("Book with id \"603e586bc9e60b3f3a1479c5\"");
         Book foundBook = bookDao.findById(new ObjectId("603e586bc9e60b3f3a1479c5"));
         System.out.println(foundBook);
 
+        // Find books with title containing "Potter 2"
         System.out.println();
         System.out.println("Books with title containing \"Potter 2\"");
         List<Book> foundBookByTitle = bookDao.findByTitle("Potter 2");
@@ -68,6 +70,7 @@ public class Main {
             System.out.println(b);
         }
 
+        // Modify the release date of the book with id "603e586bc9e60b3f3a1479c5"
         System.out.println();
         System.out.println("Modify, save and get book with id \"603e586bc9e60b3f3a1479c5\"");
         foundBook.setReleaseDate(LocalDate.of(2008, 7, 23));
