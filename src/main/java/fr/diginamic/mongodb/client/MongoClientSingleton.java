@@ -14,6 +14,8 @@ public class MongoClientSingleton {
 
     private static final String CONNECTION_STRING = "mongodb://localhost:27017";
 
+    private MongoClientSingleton() { }
+
     public static MongoClient getMongoClient() {
         if (mongoClient == null) {
             CodecRegistry pojoCodecRegistry = CodecRegistries.fromProviders(PojoCodecProvider.builder().automatic(true).build());
